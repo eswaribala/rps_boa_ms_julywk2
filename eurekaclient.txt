@@ -1,0 +1,14 @@
+#eureka client configuration
+#dc
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka
+#fetch
+eureka.client.fetch-registry=false
+#health
+eureka.client.healthcheck.enabled=true
+#register
+eureka.client.register-with-eureka=true
+#expire
+eureka.instance.lease-expiration-duration-in-seconds=2
+#interval
+eureka.instance.lease-renewal-interval-in-seconds=1
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=5000
