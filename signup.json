@@ -1,0 +1,9 @@
+{
+	"userName":"sushma",
+	"password":"test@123",
+	"roles":[
+		{"roleName":"ROLE_USER"},
+		{"roleName":"ROLE_ADMIN"}
+	
+	]
+}
