@@ -1,0 +1,4 @@
+FROM java:8
+EXPOSE 7070
+ADD /target/customerdocker-0.0.1-SNAPSHOT.jar customerdocker-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","customerdocker-0.0.1-SNAPSHOT.jar"]
