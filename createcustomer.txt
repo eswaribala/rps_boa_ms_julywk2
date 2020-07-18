@@ -1,0 +1,18 @@
+ @Transactional
+	    public Customer createCustomer(final String firstName, final String lastName,final String email, final long mobileNo , final String dob, final String gender) {
+	        final FullName fullName=new FullName();
+	        fullName.setFirstName(firstName);
+	        fullName.setLastName(lastName);
+	        fullName.setMiddleName(null);
+		    final Customer customer = new Customer();
+	        customer.setName(fullName);
+	        customer.setEmail(email);
+	        customer.setMobileNo(mobileNo);
+	        customer.setGender(GenderType.valueOf(gender));
+	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+	       
+	        //convert String to LocalDate
+	        LocalDate localDate = LocalDate.parse(dob, formatter);
+	        customer.setDob(localDate);
+	        return this.customerRepository.save(customer);
+	    }

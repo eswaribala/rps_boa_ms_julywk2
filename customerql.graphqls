@@ -1,0 +1,18 @@
+type Customer {
+	customerId: ID!,
+	name: String,
+	emailId: String,
+	mobileNo: Long,
+	dob: String,
+	gender:String
+	
+}
+
+type Query {
+	findAllCustomers:[Customer]
+	findCustomer(customerId: ID):Customer
+}
+
+type Mutation {
+	createCustomer(firstName: String!, lastName: String!, emailId: String, mobileNo: Long, dob: String, gender: String):Customer
+}
